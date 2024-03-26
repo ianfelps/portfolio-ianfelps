@@ -1,24 +1,16 @@
-document.addEventListener('DOMContentLoaded', function () {
-    var elements = document.querySelectorAll('.fade-in');
+document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".fade-in");
 
-    function fadeInOnScroll() {
-        elements.forEach(function (element) {
-            if (isElementInViewport(element)) {
-                element.classList.add('active');
+    const fadeInObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = 1;
+                observer.unobserve(entry.target);
             }
         });
-    }
+    });
 
-    function isElementInViewport(el) {
-        var rect = el.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
-
-    fadeInOnScroll();
-    window.addEventListener('scroll', fadeInOnScroll);
+    elements.forEach(element => {
+        fadeInObserver.observe(element);
+    });
 });
