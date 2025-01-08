@@ -2,7 +2,26 @@ html, body {
     height: 100%;
 }
 
+/* elementos fade-in */
 .fade-in {
     opacity: 0;
     transition: opacity 1s ease;
+}
+
+/* botao scroll to top */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    border: none;
+    width: 48px;
+    height: 48px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#scrollToTopBtn.visible {
+    opacity: 1;
 }
