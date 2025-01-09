@@ -1,5 +1,22 @@
 // efeito de fade-in
 document.addEventListener("DOMContentLoaded", () => {
+    // correção rolagem da navbar
+    var navbarLinks = document.querySelectorAll('.nav-link');
+
+    navbarLinks.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            var targetId = this.getAttribute('href').substring(1);
+            var targetElement = document.getElementById(targetId);
+            var offset = 45;
+
+            window.scrollTo({
+                top: targetElement.offsetTop - offset,
+                behavior: 'smooth'
+            });
+        });
+    });
+  
     // efeito de fade in
     const elements = document.querySelectorAll(".fade-in");
 
