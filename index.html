@@ -273,28 +273,23 @@
     <div id="contato" class="container pt-3">
         <h1 class="text-center fade-in">Contato</h1>
         <p class="text-center fade-in">Entre em contato comigo através das redes, ou pelo formulário abaixo.</p>
-        <div class="row">
-            <div class="col pt-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title fade-in"><a
-                                class="link-dark link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
-                                href="www.linkedin.com/in/ian-felipe-alves" target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a></h5>
-                        <p class="card-text fade-in">linkedin.com/in/ian-felipe-alves</p>
-                    </div>
+        <form netlify>
+            <div class="row pt-1">
+                <div class="form-group col-5 fade-in">
+                    <label for="Nome">Nome:</label>
+                    <input type="text" class="form-control" id="name" name="Nome" required>
+                </div>
+                <div class="form-group col-5 fade-in">
+                    <label for="Email">E-mail:</label>
+                    <input type="email" class="form-control" id="email" name="Email" required>
                 </div>
             </div>
-            <div class="col pt-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title fade-in"><a
-                                class="link-dark link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
-                                href="https://github.com/ianfelps" target="_blank"><i class="bi bi-github"></i>GitHub</a></h5>
-                        <p class="card-text fade-in">github.com/ianfelps</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+            <div class="form-group pt-3 fade-in">
+                <label for="Feedback">Sua Mensagen:</label>
+                <textarea class="form-control" rows="3" id="comment" name="Mensagen" required></textarea>
+            </div><br>
+            <button type="submit" class="btn btn-dark btn fade-in">Enviar</button>
+        </form>
     </div><br>
     <!--
     <hr>
@@ -312,11 +307,10 @@
     <!-- Footer -->
     <footer class=" container-fluid bg-dark text-light shadow">
         <div class="text-center fade-in p-3">
-            © <span id="currentYear"></span> Copyright: <a class="text-light" href="https://github.com/ianfelps" target="_blank">ianfelps</a>
+            © <span id="currentYear"></span>, ianfelps.
         </div>
     </footer>
     <!-- Botão de rolar para o topo -->
     <button id="scrollToTopBtn" class="btn btn-dark" title="Voltar ao Topo"><i class="bi bi-arrow-up"></i></button>
 </body>
-
 </html>
