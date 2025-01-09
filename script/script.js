@@ -1,5 +1,6 @@
 // efeito de fade-in
 document.addEventListener("DOMContentLoaded", () => {
+    // efeito de fade in
     const elements = document.querySelectorAll(".fade-in");
 
     const fadeInObserver = new IntersectionObserver((entries, observer) => {
@@ -14,10 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
     elements.forEach(element => {
         fadeInObserver.observe(element);
     });
-});
 
-// botão de rolar para o topo
-document.addEventListener('DOMContentLoaded', function () {
+    // botao de rolagem
     var scrollToTopBtn = document.getElementById('scrollToTopBtn');
   
     window.addEventListener('scroll', function () {
@@ -34,4 +33,8 @@ document.addEventListener('DOMContentLoaded', function () {
       document.body.scrollTop = 0; // para browsers da web
       document.documentElement.scrollTop = 0; // para browsers modernos
     });
-  });
+
+    // atualiza o ano no rodapé
+    var currentYear = new Date().getFullYear();
+    document.getElementById('currentYear').textContent = currentYear;
+});

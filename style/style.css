@@ -2,15 +2,12 @@ html, body {
     height: 100%;
 }
 
-img {
-    width: 1600px;
-    width: 900px;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
+.card {
+    transition: box-shadow 0.3s ease-in-out;
 }
 
-img:hover {
-    transform: scale(1.1);
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* elementos fade-in */
